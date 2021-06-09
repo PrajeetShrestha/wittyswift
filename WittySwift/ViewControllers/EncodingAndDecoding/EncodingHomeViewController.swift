@@ -29,5 +29,4 @@ class EncodingHomeViewController:NavigationAwareViewController {
         let employees:[Employee] = try! fetchJsonFromFileInBundle("employees")
         return employees.first!
     }
-    
 }

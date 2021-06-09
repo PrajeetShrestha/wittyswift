@@ -6,6 +6,8 @@
 //
 
 import UIKit
+
+// This is experimental extension do not use it except if you know what you are doing. 
 extension UIView {
     private class UIViewTapStore {
         var callback:UIViewTapGestureCallBack?

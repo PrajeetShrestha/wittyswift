@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// This demo won't work as expected in Simulator
 class NetworkMonitorViewController: NavigationAwareViewController {
     @IBOutlet weak var lblMessage: UILabel!
     @IBOutlet weak var container: UIView!

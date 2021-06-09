@@ -12,24 +12,12 @@ class NetworkingViewController:NavigationAwareViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         fetcher = NetworkDataFetcher()
         fetcher?.getTemperatures(completion: { (result) in
             switch result {
             case .success(let temp):
                 print(temp)
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        })
-        
-        fetcher?.getResponse(completion: { (result) in
-            switch result {
-            case .success(let status):
-                if status {
-                    print("Got success")
-                } else {
-                    print("Got failure")
-                }
             case .failure(let error):
                 print(error.localizedDescription)
             }
