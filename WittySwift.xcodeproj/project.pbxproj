@@ -22,7 +22,7 @@
 		B6575C242670A46E001CA83E /* GlobalTypeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6575C1E2670A46E001CA83E /* GlobalTypeAlias.swift */; };
 		B6575C252670A46E001CA83E /* ObjectAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6575C1F2670A46E001CA83E /* ObjectAssociation.swift */; };
 		B6575C262670A46E001CA83E /* CodableDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6575C202670A46E001CA83E /* CodableDefaults.swift */; };
-		B6575C272670A46E001CA83E /* EncodingAndDecoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6575C212670A46E001CA83E /* EncodingAndDecoding.swift */; };
+		B6575C272670A46E001CA83E /* GlobalUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6575C212670A46E001CA83E /* GlobalUtilities.swift */; };
 		B6575C282670A46E001CA83E /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6575C222670A46E001CA83E /* NetworkMonitor.swift */; };
 		B6575C2F2670A47F001CA83E /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6575C2A2670A47F001CA83E /* StringExtensions.swift */; };
 		B6575C302670A47F001CA83E /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6575C2B2670A47F001CA83E /* BundleExtension.swift */; };
@@ -51,6 +51,7 @@
 		B6575C712670A4A7001CA83E /* Utilities.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6575C6D2670A4A7001CA83E /* Utilities.storyboard */; };
 		B6575C722670A4A7001CA83E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6575C6E2670A4A7001CA83E /* Main.storyboard */; };
 		B6575C732670A4A7001CA83E /* Sandbox.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6575C702670A4A7001CA83E /* Sandbox.storyboard */; };
+		B6C97B4526711AB7000C301D /* EncodableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C97B4426711AB7000C301D /* EncodableExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,7 +94,7 @@
 		B6575C1E2670A46E001CA83E /* GlobalTypeAlias.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalTypeAlias.swift; sourceTree = "<group>"; };
 		B6575C1F2670A46E001CA83E /* ObjectAssociation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectAssociation.swift; sourceTree = "<group>"; };
 		B6575C202670A46E001CA83E /* CodableDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodableDefaults.swift; sourceTree = "<group>"; };
-		B6575C212670A46E001CA83E /* EncodingAndDecoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncodingAndDecoding.swift; sourceTree = "<group>"; };
+		B6575C212670A46E001CA83E /* GlobalUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalUtilities.swift; sourceTree = "<group>"; };
 		B6575C222670A46E001CA83E /* NetworkMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		B6575C2A2670A47F001CA83E /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		B6575C2B2670A47F001CA83E /* BundleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
@@ -122,6 +123,7 @@
 		B6575C6D2670A4A7001CA83E /* Utilities.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Utilities.storyboard; sourceTree = "<group>"; };
 		B6575C6F2670A4A7001CA83E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6575C702670A4A7001CA83E /* Sandbox.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Sandbox.storyboard; sourceTree = "<group>"; };
+		B6C97B4426711AB7000C301D /* EncodableExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncodableExtension.swift; sourceTree = "<group>"; };
 		BF810458C55131CF42758D3E /* Pods-WittySwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WittySwiftTests.debug.xcconfig"; path = "Target Support Files/Pods-WittySwiftTests/Pods-WittySwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C6932A55A54CF1E8FA45D9B9 /* Pods_WittySwift_WittySwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WittySwift_WittySwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01335F76DD8A238FB760079 /* Pods-WittySwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WittySwift.debug.xcconfig"; path = "Target Support Files/Pods-WittySwift/Pods-WittySwift.debug.xcconfig"; sourceTree = "<group>"; };
@@ -255,7 +257,7 @@
 				B6575C1E2670A46E001CA83E /* GlobalTypeAlias.swift */,
 				B6575C1F2670A46E001CA83E /* ObjectAssociation.swift */,
 				B6575C202670A46E001CA83E /* CodableDefaults.swift */,
-				B6575C212670A46E001CA83E /* EncodingAndDecoding.swift */,
+				B6575C212670A46E001CA83E /* GlobalUtilities.swift */,
 				B6575C222670A46E001CA83E /* NetworkMonitor.swift */,
 			);
 			path = Utilities;
@@ -269,6 +271,7 @@
 				B6575C2C2670A47F001CA83E /* UIViewControllerExtensions.swift */,
 				B6575C2D2670A47F001CA83E /* UIViewExtensions.swift */,
 				B6575C2E2670A47F001CA83E /* ExtensionForClassName.swift */,
+				B6C97B4426711AB7000C301D /* EncodableExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -647,6 +650,7 @@
 				B6575C3D2670A49A001CA83E /* AppController.swift in Sources */,
 				B6575C6A2670A4A1001CA83E /* SandboxHomeViewController.swift in Sources */,
 				B6575C332670A47F001CA83E /* ExtensionForClassName.swift in Sources */,
+				B6C97B4526711AB7000C301D /* EncodableExtension.swift in Sources */,
 				B6575C5C2670A4A1001CA83E /* BaseViewController.swift in Sources */,
 				B6575C322670A47F001CA83E /* UIViewExtensions.swift in Sources */,
 				B6575C662670A4A1001CA83E /* DummyViewController.swift in Sources */,
@@ -654,7 +658,7 @@
 				B6575C312670A47F001CA83E /* UIViewControllerExtensions.swift in Sources */,
 				B6575C5E2670A4A1001CA83E /* NavigationAwareViewController.swift in Sources */,
 				B6575C642670A4A1001CA83E /* DataFetcher.swift in Sources */,
-				B6575C272670A46E001CA83E /* EncodingAndDecoding.swift in Sources */,
+				B6575C272670A46E001CA83E /* GlobalUtilities.swift in Sources */,
 				B6575C242670A46E001CA83E /* GlobalTypeAlias.swift in Sources */,
 				B6575C672670A4A1001CA83E /* MessageCenterViewController.swift in Sources */,
 				B6575C362670A486001CA83E /* MenuItem.swift in Sources */,

@@ -11,7 +11,6 @@ class EncodingHomeViewController:NavigationAwareViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchJsonFromFile()
-    
     }
     
     func fetchJsonFromFile() {
@@ -24,5 +23,4 @@ class EncodingHomeViewController:NavigationAwareViewController {
         }
         print(employees)
     }
-    
 }

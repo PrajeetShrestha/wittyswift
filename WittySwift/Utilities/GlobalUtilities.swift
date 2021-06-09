@@ -7,6 +7,14 @@
 
 import Foundation
 
+/// Method to get codable objects from the JSON File in the bundle
+/// - Parameter name: Name of a JSON file in the bundle
+/// - Throws: NSError if JSON file is not found in a bundle, Error if can't decode objects in JSON.
+/// - Returns: Decodable Object specified
+///
+/// **Example**
+///
+///     let employees:[Employee] = try! fetchJsonFromFileInBundle("employees")
 func fetchJsonFromFileInBundle<T:Decodable>(_ name:String) throws ->T {
     let decoder = JSONDecoder()
     decoder.keyDecodingStrategy = .convertFromSnakeCase
@@ -24,6 +32,10 @@ func fetchJsonFromFileInBundle<T:Decodable>(_ name:String) throws ->T {
 }
 
 
+/// Method to convert dictionary into Decodable Object
+/// - Parameter dictionary: Dictionary object to convert.
+/// - Throws: Error if dictionary can't be converted into specified Decodable Object
+/// - Returns: Decodable Object
 func getValueFromDictionary<T:Decodable>(dictionary: [String:Any]) throws-> T {
     do {
         let json = try JSONSerialization.data(withJSONObject: dictionary)
@@ -36,34 +48,7 @@ func getValueFromDictionary<T:Decodable>(dictionary: [String:Any]) throws-> T {
     }
 }
 
-extension Encodable {
-    
-    var dictionary : [String: Any]? {
-        guard let data = try? JSONEncoder().encode(self) else { return nil }
-        guard let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String:Any] else { return nil }
-        return json
-    }
-    
-    func convertToDictionary() throws -> [String:Any] {
-        do {
-            let data = try JSONEncoder().encode(self)
-            guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String:Any] else {
-                throw NSError(domain: "Serialization failure", code: 101, userInfo: nil)
-            }
-            return json
-        } catch {
-            throw error
-        }
-    }
-    
-    func convertToLowercaseKeyedDictionary() throws -> [String:Any] {
-        var dict = try convertToDictionary()
-        for key in dict.keys {
-            dict[key.lowercased()] = dict.removeValue(forKey: key)
-        }
-        return dict
-    }
-}
+
     
 
 
