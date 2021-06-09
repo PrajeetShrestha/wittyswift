@@ -94,7 +94,7 @@ class MessageCenter {
     }
     
     deinit {
-        print("MC: Removed")
+        print("Message center deinit.")
         remove()
     }
 }

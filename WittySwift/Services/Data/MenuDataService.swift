@@ -10,8 +10,10 @@ import Foundation
 
 struct MenuDataservice {
     static let menuItems: [MenuItem] = [
-        MenuItem(controller: .networkMonitor),
         MenuItem(controller: .messageCenter),
+        MenuItem(controller: .networkMonitor),
+        MenuItem(controller: .encodingHome),
+        MenuItem(controller: .networking),
         MenuItem(controller: .sandboxHome(SandboxHomeInput(data: "TestData"))),
         MenuItem(controller: .dummy),
     ]

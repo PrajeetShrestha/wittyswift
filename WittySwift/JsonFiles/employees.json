@@ -4,6 +4,9 @@
         "id" : 35,
         "gift": {
             "name" : "Macbook Pro"
+        },
+        "address" :  {
+            "ward" : 1
         }
     }
 ]
