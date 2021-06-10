@@ -11,16 +11,13 @@ class EncodingHomeViewController:NavigationAwareViewController {
     
     @IBOutlet weak var lblMessage: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         let employee = fetchEmployee()
         lblMessage.attributedText =
             NSMutableAttributedString()
-                .bold("ID: ")
-            .normal("\(employee.id)\n\n")
-            .bold("Name: ")
-            .normal("\(employee.name)\n\n")
+            .bold("ID: ").normal("\(employee.id)\n\n")
+            .bold("Name: ").normal("\(employee.name)\n\n")
             .underlined("Gift: \(employee.favoriteToy.name)\n\n")
             .orangeHighlight("Ward: \(employee.address.ward)")
     }

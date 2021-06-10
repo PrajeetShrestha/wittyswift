@@ -50,6 +50,7 @@ enum MessageName:String {
 /// 3. You can use weak reference in callback closures to prevent retention cycle.
 /// 4. If you use weak references then you don't need to call remove() method explicitly.
 class MessageCenter {
+    var scope:String = ""
     public typealias CallBack = (_ data:[AnyHashable:Any]?) -> Void
     
     public init() {}
@@ -94,7 +95,7 @@ class MessageCenter {
     }
     
     deinit {
-        print("Message center deinit.")
+        print("MessageCenter deinit from: \(scope)")
         remove()
     }
 }
