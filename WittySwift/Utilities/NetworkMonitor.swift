@@ -27,6 +27,7 @@ class NetworkMonitor {
     let messageCenter = MessageCenter()
     
     func startMonitoringNetwork() {
+        messageCenter.scope = "NetworkMonitor"
         #if targetEnvironment(simulator)
         isConnected = true
         #else

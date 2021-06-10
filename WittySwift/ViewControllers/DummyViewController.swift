@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DummyViewController:UIViewController {
+class DummyViewController:NavigationAwareViewController {
     
 }
 

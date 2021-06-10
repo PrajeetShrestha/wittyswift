@@ -7,18 +7,21 @@
 
 import Foundation
 
+/// Utility class to store Codable objects in UserDefaults
 enum CodableDefaults:String {
     case loggedInUser
     case settings
     
-    /*
-     set:
-     This method cannot infer the return type unless the variable that will store the returned data has the type defined explicitly.
-     Example:
-     let person:[Person] = AkCodableDefaults().selectedBrand.get()
-     Note: Here person variable has [Person] type explicitly defined.
-     */
-    
+    /// Method to store codable objects into user defaults.
+    /// - Parameter value: Codable Object
+    /// - Throws: NSError if it can't save codable objects into dictionary
+    ///
+    /// **Example**
+    ///
+    ///     let user = User(name:"Prajeet")
+    ///
+    ///     try CodableDefaults.set(user)
+    ///
     func set<T:Codable>(value:T) throws {
         let std = UserDefaults.standard
         do {
@@ -27,8 +30,16 @@ enum CodableDefaults:String {
         } catch let error {
             throw NSError(domain: "Couldn't save object to defaults: \(error.localizedDescription)", code: 101, userInfo: nil)
         }
+         
     }
-
+    
+    /// Method to get a codable object from User Defaults
+    /// - Returns: Codable Object or nil
+    ///
+    ///**Example**
+    ///
+    ///     let employee:Employee? = CodableDefaults.loggedInUser.get()
+    ///
     func get<T:Codable>() -> T? {
         let std = UserDefaults.standard
         if let value = std.object(forKey: self.rawValue) as? Data {

@@ -15,10 +15,26 @@
                     <view key="view" contentMode="scaleToFill" id="tb2-yA-91G">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFw-Lw-Dts">
+                                <rect key="frame" x="32" y="443" width="350" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="ZMS-km-v74"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZMS-km-v74" firstAttribute="trailing" secondItem="XFw-Lw-Dts" secondAttribute="trailing" constant="32" id="FfR-qj-Fbe"/>
+                            <constraint firstItem="XFw-Lw-Dts" firstAttribute="leading" secondItem="ZMS-km-v74" secondAttribute="leading" constant="32" id="Xfm-WU-jme"/>
+                            <constraint firstItem="XFw-Lw-Dts" firstAttribute="centerY" secondItem="ZMS-km-v74" secondAttribute="centerY" id="dFn-YF-Gu5"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="53R-kL-XRp"/>
+                    <connections>
+                        <outlet property="lblMessage" destination="XFw-Lw-Dts" id="nKL-tY-QoN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="txg-rM-bkf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

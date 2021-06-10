@@ -11,6 +11,7 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        messageCenter.scope = typeName
         title = typeName.deleteSuffix("ViewController")
     }
 }
