@@ -8,43 +8,40 @@
 import UIKit
 
 enum AppController {
-    case home
+    case list([MenuItem], String)
     case messageCenter
     case networkMonitor
     case networking
-    case sandboxHome(SandboxHomeInput)
     case encodingHome
     case dummy
-
+    case about
+    
     var name: ControllerName {
         switch self {
-        case .home: return .HomeViewController
+        case .list: return .Common
         case .messageCenter: return .MessageCenterViewController
         case .networkMonitor: return .NetworkMonitorViewController
         case .networking: return .NetworkingViewController
-        case .sandboxHome: return .SandboxHomeViewController
         case .encodingHome: return .EncodingHomeViewController
         case .dummy: return .DummyViewController
+        case .about: return .AboutViewController
         
         }
     }
     
     var storyboard: StoryboardName {
         switch self {
-        case .home, .networking: return .Main
+        case .networking, .about: return .Main
         case .messageCenter, .networkMonitor, .encodingHome, .dummy: return .Utilities
-        case .sandboxHome: return .Sandbox
+        default: return .Main
         }
     }
     
     var instance: UIViewController {
         let sb = UIStoryboard(name: storyboard.rawValue, bundle: nil)
         switch self {
-        case .sandboxHome(let data):
-            let sandboxVc = sb.instantiateViewController(identifier: name.rawValue) { coder in
-                return SandboxHomeViewController(coder: coder, input: data)
-            }
-            return sandboxVc
+        case .list(let items, let title):
+            return ControllerListViewController.instantiate(menuItems:items, viewTitle: title)
         default:
             return sb.instantiateViewController(withIdentifier: name.rawValue)
         }
@@ -52,17 +49,19 @@ enum AppController {
 }
 
 enum ControllerName:String, CaseIterable {
-   case HomeViewController
-   case MessageCenterViewController
-   case NetworkMonitorViewController
-   case NetworkingViewController
-   case SandboxHomeViewController
-   case EncodingHomeViewController
-   case DummyViewController
+    case HomeViewController
+    case MessageCenterViewController
+    case NetworkMonitorViewController
+    case NetworkingViewController
+    case SandboxHomeViewController
+    case EncodingHomeViewController
+    case DummyViewController
+    case AboutViewController
+    case Common
 }
 
 enum StoryboardName:String, CaseIterable {
-   case Main
-   case Utilities
-   case Sandbox
+    case Main
+    case Utilities
+    case Sandbox
 }

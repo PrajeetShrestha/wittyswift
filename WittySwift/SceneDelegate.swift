@@ -12,10 +12,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        guard let _ = (scene as? UIWindowScene) else { return }
-        guard let window = window else { return }
+        guard let scene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(windowScene: scene)
         NavigationService.shared.window = window
-        NavigationService.shared.setRoot(controller: .home)
+        NavigationService.shared.setRoot(controller: .list(MenuDataservice.homeMenuItems, "Home"))
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

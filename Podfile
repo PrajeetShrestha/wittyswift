@@ -7,6 +7,7 @@ target 'WittySwift' do
 
   # Pods for WittySwift
     pod 'Moya', '~> 14.0'
+    pod 'FontAwesome.swift'
   target 'WittySwiftTests' do
     inherit! :search_paths
     # Pods for testing

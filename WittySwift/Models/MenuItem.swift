@@ -9,4 +9,14 @@ import UIKit
 
 struct MenuItem {
     var controller:AppController
+    var iconImage:UIImage?
+    
+    func getName() -> String {
+        switch controller {
+        case .list(_, let title):
+            return title
+        default:
+            return controller.name.rawValue
+        }
+    }
 }
