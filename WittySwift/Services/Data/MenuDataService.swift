@@ -28,6 +28,7 @@ struct MenuDataservice {
         MenuItem(controller: .list(MenuDataservice.utilityMenuItems, "Utilities"), iconImage: Icons.utilities),
         MenuItem(controller: .networking, iconImage: Icons.network),
         MenuItem(controller: .list(MenuDataservice.sandboxMenuItems, "Sandbox"), iconImage: Icons.sandbox),
+        MenuItem(controller: .webrtc, iconImage: nil)
     ]
     
     static var utilityMenuItems: [MenuItem] {

@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (5.4.1)
   - FontAwesome.swift (1.9.1)
+  - GoogleWebRTC (1.1.31999)
   - Moya (14.0.0):
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
@@ -8,19 +9,22 @@ PODS:
 
 DEPENDENCIES:
   - FontAwesome.swift
+  - GoogleWebRTC
   - Moya (~> 14.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - FontAwesome.swift
+    - GoogleWebRTC
     - Moya
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   FontAwesome.swift: 6b52cb7be66eacd28cbfaa0ca7ffd0de4a186a1d
+  GoogleWebRTC: b39a78c4f5cc6b0323415b9233db03a2faa7b0f0
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
 
-PODFILE CHECKSUM: 1c3e4f9e1eef0e06f68dd03eb0786178e51a2b4d
+PODFILE CHECKSUM: a022bcbf0e47c9b5d6243abb3c98660fc89efa63
 
 COCOAPODS: 1.10.1

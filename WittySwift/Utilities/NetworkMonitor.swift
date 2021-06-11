@@ -12,6 +12,7 @@ import Network
 class NetworkMonitor {
     public static let shared = NetworkMonitor()
     let queue = DispatchQueue(label: "Monitor")
+    
     private init() {}
     
     var isConnected = false {
