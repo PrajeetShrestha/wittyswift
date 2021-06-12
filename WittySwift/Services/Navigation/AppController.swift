@@ -15,7 +15,7 @@ enum AppController {
     case encodingHome
     case dummy
     case about
-    case webrtc
+    case imageserver
     
     var name: ControllerName {
         switch self {
@@ -26,7 +26,7 @@ enum AppController {
         case .encodingHome: return .EncodingHomeViewController
         case .dummy: return .DummyViewController
         case .about: return .AboutViewController
-        case .webrtc: return .WebRTCViewController
+        case .imageserver: return .ImageServerViewController
         
         }
     }
@@ -35,7 +35,7 @@ enum AppController {
         switch self {
         case .networking, .about: return .Main
         case .messageCenter, .networkMonitor, .encodingHome, .dummy: return .Utilities
-        case .webrtc: return .WebRTC
+        case .imageserver: return .ImageServer
         default: return .Main
         }
     }
@@ -61,12 +61,12 @@ enum ControllerName:String, CaseIterable {
     case DummyViewController
     case AboutViewController
     case Common
-    case WebRTCViewController
+    case ImageServerViewController
 }
 
 enum StoryboardName:String, CaseIterable {
     case Main
     case Utilities
     case Sandbox
-    case WebRTC
+    case ImageServer
 }

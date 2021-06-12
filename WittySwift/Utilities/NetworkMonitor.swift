@@ -12,7 +12,7 @@ import Network
 class NetworkMonitor {
     public static let shared = NetworkMonitor()
     let queue = DispatchQueue(label: "Monitor")
-    
+    var isSetForTheFirstTime: Bool = false
     private init() {}
     
     var isConnected = false {

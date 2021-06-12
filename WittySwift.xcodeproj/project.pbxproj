@@ -54,12 +54,20 @@
 		B6C97B4C267135C8000C301D /* ControllerListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6C97B4A267135C8000C301D /* ControllerListViewController.xib */; };
 		B6C97B5026717CFA000C301D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C97B4F26717CFA000C301D /* AboutViewController.swift */; };
 		CE7CC5B0267306A800D25B01 /* WebServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7CC5AF267306A800D25B01 /* WebServer.swift */; };
-		CEB8778126726C7400FDD150 /* RTCCustomFrameCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB8777D26726C7400FDD150 /* RTCCustomFrameCapture.swift */; };
-		CEB8778226726C7400FDD150 /* RTCSimulatorVideoDecoderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB8777E26726C7400FDD150 /* RTCSimulatorVideoDecoderFactory.swift */; };
-		CEB8778326726C7400FDD150 /* WebRTCClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB8777F26726C7400FDD150 /* WebRTCClient.swift */; };
-		CEB8778426726C7400FDD150 /* RTCSimluatorVideoEncoderFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB8778026726C7400FDD150 /* RTCSimluatorVideoEncoderFactory.swift */; };
-		CEB877892672756100FDD150 /* WebRTC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB877882672756100FDD150 /* WebRTC.storyboard */; };
-		CEB8778F267286C400FDD150 /* WebRTCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB8778E267286C400FDD150 /* WebRTCViewController.swift */; };
+		CEB877892672756100FDD150 /* ImageServer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEB877882672756100FDD150 /* ImageServer.storyboard */; };
+		CEB8778F267286C400FDD150 /* ImageServerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB8778E267286C400FDD150 /* ImageServerViewController.swift */; };
+		CEFAD73C26749616007E9001 /* yudpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = CEFAD73626749616007E9001 /* yudpsocket.c */; };
+		CEFAD73D26749616007E9001 /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = CEFAD73726749616007E9001 /* ytcpsocket.c */; };
+		CEFAD73E26749616007E9001 /* TCPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFAD73826749616007E9001 /* TCPClient.swift */; };
+		CEFAD73F26749616007E9001 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFAD73926749616007E9001 /* Result.swift */; };
+		CEFAD74026749616007E9001 /* UDPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFAD73A26749616007E9001 /* UDPClient.swift */; };
+		CEFAD74126749616007E9001 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFAD73B26749616007E9001 /* Socket.swift */; };
+		CEFAD7572675088B007E9001 /* ipaddress.c in Sources */ = {isa = PBXBuildFile; fileRef = CEFAD7562675088B007E9001 /* ipaddress.c */; };
+		CEFAD772267521AE007E9001 /* image.html in Resources */ = {isa = PBXBuildFile; fileRef = CEFAD771267521AE007E9001 /* image.html */; };
+		CEFAD7802675298F007E9001 /* WebResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFAD77F2675298F007E9001 /* WebResponse.swift */; };
+		CEFAD78826752999007E9001 /* WebRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFAD78726752999007E9001 /* WebRequest.swift */; };
+		CEFAD78D267529C5007E9001 /* HTTPHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFAD78C267529C5007E9001 /* HTTPHeader.swift */; };
+		CEFAD79526752B31007E9001 /* IPAddr.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFAD79426752B31007E9001 /* IPAddr.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,12 +144,20 @@
 		BF810458C55131CF42758D3E /* Pods-WittySwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WittySwiftTests.debug.xcconfig"; path = "Target Support Files/Pods-WittySwiftTests/Pods-WittySwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C6932A55A54CF1E8FA45D9B9 /* Pods_WittySwift_WittySwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WittySwift_WittySwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE7CC5AF267306A800D25B01 /* WebServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServer.swift; sourceTree = "<group>"; };
-		CEB8777D26726C7400FDD150 /* RTCCustomFrameCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTCCustomFrameCapture.swift; sourceTree = "<group>"; };
-		CEB8777E26726C7400FDD150 /* RTCSimulatorVideoDecoderFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTCSimulatorVideoDecoderFactory.swift; sourceTree = "<group>"; };
-		CEB8777F26726C7400FDD150 /* WebRTCClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebRTCClient.swift; sourceTree = "<group>"; };
-		CEB8778026726C7400FDD150 /* RTCSimluatorVideoEncoderFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTCSimluatorVideoEncoderFactory.swift; sourceTree = "<group>"; };
-		CEB877882672756100FDD150 /* WebRTC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebRTC.storyboard; sourceTree = "<group>"; };
-		CEB8778E267286C400FDD150 /* WebRTCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRTCViewController.swift; sourceTree = "<group>"; };
+		CEB877882672756100FDD150 /* ImageServer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ImageServer.storyboard; sourceTree = "<group>"; };
+		CEB8778E267286C400FDD150 /* ImageServerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageServerViewController.swift; sourceTree = "<group>"; };
+		CEFAD73626749616007E9001 /* yudpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = yudpsocket.c; sourceTree = "<group>"; };
+		CEFAD73726749616007E9001 /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ytcpsocket.c; sourceTree = "<group>"; };
+		CEFAD73826749616007E9001 /* TCPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCPClient.swift; sourceTree = "<group>"; };
+		CEFAD73926749616007E9001 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		CEFAD73A26749616007E9001 /* UDPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UDPClient.swift; sourceTree = "<group>"; };
+		CEFAD73B26749616007E9001 /* Socket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
+		CEFAD7562675088B007E9001 /* ipaddress.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ipaddress.c; sourceTree = "<group>"; };
+		CEFAD771267521AE007E9001 /* image.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = image.html; sourceTree = "<group>"; };
+		CEFAD77F2675298F007E9001 /* WebResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebResponse.swift; sourceTree = "<group>"; };
+		CEFAD78726752999007E9001 /* WebRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRequest.swift; sourceTree = "<group>"; };
+		CEFAD78C267529C5007E9001 /* HTTPHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeader.swift; sourceTree = "<group>"; };
+		CEFAD79426752B31007E9001 /* IPAddr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPAddr.swift; sourceTree = "<group>"; };
 		E01335F76DD8A238FB760079 /* Pods-WittySwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WittySwift.debug.xcconfig"; path = "Target Support Files/Pods-WittySwift/Pods-WittySwift.debug.xcconfig"; sourceTree = "<group>"; };
 		F19FF3BAEC0C46C818077EB2 /* Pods_WittySwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WittySwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F72EA8946113DE1887AF2EEA /* Pods-WittySwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WittySwiftTests.release.xcconfig"; path = "Target Support Files/Pods-WittySwiftTests/Pods-WittySwiftTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -270,9 +286,8 @@
 		B6575C1C2670A46E001CA83E /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				CEB8777C26726C7400FDD150 /* WebRTC */,
+				CEFAD7482674BBCB007E9001 /* ImageServer */,
 				B6575C1D2670A46E001CA83E /* MessageCenter.swift */,
-				CE7CC5AF267306A800D25B01 /* WebServer.swift */,
 				B6575C1E2670A46E001CA83E /* GlobalTypeAlias.swift */,
 				B6575C1F2670A46E001CA83E /* ObjectAssociation.swift */,
 				B6575C202670A46E001CA83E /* CodableDefaults.swift */,
@@ -323,7 +338,7 @@
 		B6575C412670A4A1001CA83E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				CEB8778D267286B300FDD150 /* WebRTC */,
+				CEB8778D267286B300FDD150 /* ImageServer */,
 				B6575C422670A4A1001CA83E /* BaseClasses */,
 				B6C97B4E26717CCC000C301D /* Utilities */,
 				B6575C492670A4A1001CA83E /* Networking */,
@@ -410,7 +425,7 @@
 				B6575C6D2670A4A7001CA83E /* Utilities.storyboard */,
 				B6575C6E2670A4A7001CA83E /* Main.storyboard */,
 				B6575C702670A4A7001CA83E /* Sandbox.storyboard */,
-				CEB877882672756100FDD150 /* WebRTC.storyboard */,
+				CEB877882672756100FDD150 /* ImageServer.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -443,23 +458,56 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		CEB8777C26726C7400FDD150 /* WebRTC */ = {
+		CEB8778D267286B300FDD150 /* ImageServer */ = {
 			isa = PBXGroup;
 			children = (
-				CEB8777D26726C7400FDD150 /* RTCCustomFrameCapture.swift */,
-				CEB8777E26726C7400FDD150 /* RTCSimulatorVideoDecoderFactory.swift */,
-				CEB8777F26726C7400FDD150 /* WebRTCClient.swift */,
-				CEB8778026726C7400FDD150 /* RTCSimluatorVideoEncoderFactory.swift */,
+				CEB8778E267286C400FDD150 /* ImageServerViewController.swift */,
+				CEFAD771267521AE007E9001 /* image.html */,
 			);
-			path = WebRTC;
+			path = ImageServer;
 			sourceTree = "<group>";
 		};
-		CEB8778D267286B300FDD150 /* WebRTC */ = {
+		CEFAD73526749616007E9001 /* SuperSocket */ = {
 			isa = PBXGroup;
 			children = (
-				CEB8778E267286C400FDD150 /* WebRTCViewController.swift */,
+				CEFAD75526750870007E9001 /* ipaddress */,
+				CEFAD73626749616007E9001 /* yudpsocket.c */,
+				CEFAD73726749616007E9001 /* ytcpsocket.c */,
+				CEFAD73826749616007E9001 /* TCPClient.swift */,
+				CEFAD73926749616007E9001 /* Result.swift */,
+				CEFAD73A26749616007E9001 /* UDPClient.swift */,
+				CEFAD73B26749616007E9001 /* Socket.swift */,
 			);
-			path = WebRTC;
+			path = SuperSocket;
+			sourceTree = "<group>";
+		};
+		CEFAD7482674BBCB007E9001 /* ImageServer */ = {
+			isa = PBXGroup;
+			children = (
+				CEFAD77E26752967007E9001 /* WebServer */,
+				CEFAD73526749616007E9001 /* SuperSocket */,
+			);
+			path = ImageServer;
+			sourceTree = "<group>";
+		};
+		CEFAD75526750870007E9001 /* ipaddress */ = {
+			isa = PBXGroup;
+			children = (
+				CEFAD7562675088B007E9001 /* ipaddress.c */,
+				CEFAD79426752B31007E9001 /* IPAddr.swift */,
+			);
+			path = ipaddress;
+			sourceTree = "<group>";
+		};
+		CEFAD77E26752967007E9001 /* WebServer */ = {
+			isa = PBXGroup;
+			children = (
+				CE7CC5AF267306A800D25B01 /* WebServer.swift */,
+				CEFAD77F2675298F007E9001 /* WebResponse.swift */,
+				CEFAD78726752999007E9001 /* WebRequest.swift */,
+				CEFAD78C267529C5007E9001 /* HTTPHeader.swift */,
+			);
+			path = WebServer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -570,6 +618,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEFAD772267521AE007E9001 /* image.html in Resources */,
 				B6575BF62670A43F001CA83E /* LaunchScreen.storyboard in Resources */,
 				B6575C1B2670A459001CA83E /* employees.json in Resources */,
 				B6C97B4C267135C8000C301D /* ControllerListViewController.xib in Resources */,
@@ -577,7 +626,7 @@
 				B6575C722670A4A7001CA83E /* Main.storyboard in Resources */,
 				B6575C732670A4A7001CA83E /* Sandbox.storyboard in Resources */,
 				B6575C712670A4A7001CA83E /* Utilities.storyboard in Resources */,
-				CEB877892672756100FDD150 /* WebRTC.storyboard in Resources */,
+				CEB877892672756100FDD150 /* ImageServer.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,43 +755,50 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6575C652670A4A1001CA83E /* NetworkDataFetcher.swift in Sources */,
+				CEFAD78826752999007E9001 /* WebRequest.swift in Sources */,
 				B6575C5D2670A4A1001CA83E /* DataInjectable.swift in Sources */,
 				B6575C252670A46E001CA83E /* ObjectAssociation.swift in Sources */,
 				B6575C232670A46E001CA83E /* MessageCenter.swift in Sources */,
+				CEFAD79526752B31007E9001 /* IPAddr.swift in Sources */,
 				B6575C612670A4A1001CA83E /* NetworkViewController.swift in Sources */,
 				B6575C602670A4A1001CA83E /* Models.swift in Sources */,
+				CEFAD74126749616007E9001 /* Socket.swift in Sources */,
 				B6575C632670A4A1001CA83E /* ResponseModels.swift in Sources */,
 				B6575C2F2670A47F001CA83E /* StringExtensions.swift in Sources */,
-				CEB8778126726C7400FDD150 /* RTCCustomFrameCapture.swift in Sources */,
 				B6575C3D2670A49A001CA83E /* AppController.swift in Sources */,
-				CEB8778226726C7400FDD150 /* RTCSimulatorVideoDecoderFactory.swift in Sources */,
 				B6575C332670A47F001CA83E /* ExtensionForClassName.swift in Sources */,
 				B6C97B4526711AB7000C301D /* EncodableExtension.swift in Sources */,
 				B6575C5C2670A4A1001CA83E /* BaseViewController.swift in Sources */,
 				B6575C322670A47F001CA83E /* UIViewExtensions.swift in Sources */,
 				B6575C662670A4A1001CA83E /* DummyViewController.swift in Sources */,
 				B6575BF12670A43E001CA83E /* WittySwift.xcdatamodeld in Sources */,
+				CEFAD74026749616007E9001 /* UDPClient.swift in Sources */,
 				B6575C312670A47F001CA83E /* UIViewControllerExtensions.swift in Sources */,
-				CEB8778426726C7400FDD150 /* RTCSimluatorVideoEncoderFactory.swift in Sources */,
+				CEFAD7802675298F007E9001 /* WebResponse.swift in Sources */,
+				CEFAD73D26749616007E9001 /* ytcpsocket.c in Sources */,
+				CEFAD73C26749616007E9001 /* yudpsocket.c in Sources */,
 				B6575C5E2670A4A1001CA83E /* NavigationAwareViewController.swift in Sources */,
 				B6575C642670A4A1001CA83E /* DataFetcher.swift in Sources */,
+				CEFAD73E26749616007E9001 /* TCPClient.swift in Sources */,
 				B6575C272670A46E001CA83E /* GlobalUtilities.swift in Sources */,
 				B6575C242670A46E001CA83E /* GlobalTypeAlias.swift in Sources */,
 				CE7CC5B0267306A800D25B01 /* WebServer.swift in Sources */,
 				B6575C672670A4A1001CA83E /* MessageCenterViewController.swift in Sources */,
 				B6575C362670A486001CA83E /* MenuItem.swift in Sources */,
+				CEFAD7572675088B007E9001 /* ipaddress.c in Sources */,
 				B6575C262670A46E001CA83E /* CodableDefaults.swift in Sources */,
 				B6575BE72670A43E001CA83E /* AppDelegate.swift in Sources */,
-				CEB8778326726C7400FDD150 /* WebRTCClient.swift in Sources */,
 				B6575C5F2670A4A1001CA83E /* EncodingHomeViewController.swift in Sources */,
 				B6575C622670A4A1001CA83E /* ApiService.swift in Sources */,
 				B6C97B5026717CFA000C301D /* AboutViewController.swift in Sources */,
+				CEFAD73F26749616007E9001 /* Result.swift in Sources */,
 				B6575C282670A46E001CA83E /* NetworkMonitor.swift in Sources */,
 				B6575BE92670A43E001CA83E /* SceneDelegate.swift in Sources */,
+				CEFAD78D267529C5007E9001 /* HTTPHeader.swift in Sources */,
 				B6C97B4B267135C8000C301D /* ControllerListViewController.swift in Sources */,
 				B6575C3F2670A49A001CA83E /* MenuDataService.swift in Sources */,
 				B6575C402670A49A001CA83E /* NavigationService.swift in Sources */,
-				CEB8778F267286C400FDD150 /* WebRTCViewController.swift in Sources */,
+				CEB8778F267286C400FDD150 /* ImageServerViewController.swift in Sources */,
 				B6575C302670A47F001CA83E /* BundleExtension.swift in Sources */,
 				B6575C692670A4A1001CA83E /* NetworkMonitorViewController.swift in Sources */,
 			);

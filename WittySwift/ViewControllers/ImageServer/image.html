@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <style type="text/css">
+        /* The grid: Four equal columns that floats next to each other */
+
+.row {
+  overflow: hidden;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+  overflow: hidden;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 1;
+  cursor: pointer;
+  height: 200px;
+  width: 200px;
+  object-fit: contain;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container (positioning is needed to position the close button and the text) */
+.container {
+    position: -webkit-sticky;
+  position: sticky;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 100px;
+  display: none;
+  z-index: 1;
+  width: 20%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+  display: none;
+}
+
+/* Closable button inside the image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: red;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+#expandedImg {
+    width: 100%;
+    object-fit: cover;
+}
+
+</style>
+</head>
+<body>
+<!-- The grid: four columns -->
+<div id = "row_container" class="row">
+  
+</div>
+
+<!-- The expanding image container -->
+<div class="container">
+  <!-- Close the image -->
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+  <!-- Expanded image -->
+  <img id="expandedImg" style="width:100%">
+
+  <!-- Image text -->
+  <div id="imgtext"></div>
+</div>
+<script type="text/javascript">
+
+    window.onload = () => {
+        console.log("on load called")
+        fetchImages();
+    }
+
+    async function fetchImages() {
+        console.log("fetching data")
+        const { data } = await axios.get('http://$(serverUrl):8080/fetchImage')
+        console.log(data)
+        var row_container = document.getElementById("row_container");
+        row_container.innerHTML = ""
+        data.forEach(function(url) {
+            row_container.innerHTML += `<div class="column">
+    <img src="${url}" alt="Nature" onclick="myFunction(this);">
+  </div>`
+        })
+    }
+
+function myFunction(imgs) {
+  // Get the expanded image
+  var expandImg = document.getElementById("expandedImg");
+  // Get the image text
+  var imgText = document.getElementById("imgtext");
+  // Use the same src in the expanded image as the image being clicked on from the grid
+  expandImg.src = imgs.src + "&hd=true";
+  // Use the value of the alt attribute of the clickable image as text inside the expanded image
+  imgText.innerHTML = imgs.alt;
+  // Show the container element (hidden with CSS)
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+</body>
+</html>
