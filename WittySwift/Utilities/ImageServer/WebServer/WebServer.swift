@@ -70,12 +70,10 @@ class WebServer {
         let bufferSize = 64
         let mutableData = NSMutableData()
         while true {
-            print("looping")
             let readData = client.read(bufferSize, handler: {byte in
                 let d = Data(bytes: byte ?? [], count: byte?.count ?? 0)
                 mutableData.append(d)
             })
-            print("ReadDataLen: \(readData)")
             if readData < bufferSize {
                 break
             }

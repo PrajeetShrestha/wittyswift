@@ -17,6 +17,7 @@ class ImageServerViewController: UIViewController {
     internal lazy var imageManager = PHImageManager.default()
     var allPhotos: PHFetchResult<PHAsset> = PHFetchResult<PHAsset>()
     var htmlString = ""
+    var port = 8080
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +35,7 @@ class ImageServerViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        linkLabel.text = "http://" + GetIpAddress() + ":8080/image"
+        linkLabel.text = "http://" + GetIpAddress() + ":\(port)/image"
         DispatchQueue.global().async {
             
             // Image Html Server
@@ -51,7 +52,7 @@ class ImageServerViewController: UIViewController {
                     return
                 }
                 for i in 0..<self.allPhotos.count {
-                    images.append("http://192.165.10.67:8080/photos?id=\(i)")
+                    images.append("http://\(GetIpAddress()):\(self.port)/photos?id=\(i)")
                 }
                 if let json = try? JSONSerialization.data(withJSONObject: images, options: .prettyPrinted) {
                     res?.json(string: String(data: json, encoding: .utf8) ?? "")
@@ -63,7 +64,6 @@ class ImageServerViewController: UIViewController {
             
             // Photo server
             self.server.get(path: "/photos", handler: {(req,res) in
-                print("get photos called")
                 let id: Int = Int(req.params?["id"] ?? "0") ?? 0
                 let hd: Bool = (req.params?["hd"] ?? "") == "true"
                 let imageOption = PHImageRequestOptions()
@@ -87,7 +87,7 @@ class ImageServerViewController: UIViewController {
             })
             
             // Run server at 8080
-            self.server.run(port: 8080)
+            self.server.run(port: self.port)
         }
     }
     
@@ -100,7 +100,7 @@ class ImageServerViewController: UIViewController {
     func fetchImageHtml() -> String {
         if let path = Bundle.main.path(forResource: "image", ofType: "html") {
           do {
-            return try String(contentsOfFile: path, encoding: .utf8).replacingOccurrences(of: "$(serverUrl)", with: GetIpAddress())
+            return try String(contentsOfFile: path, encoding: .utf8).replacingOccurrences(of: "$(serverUrl)", with: GetIpAddress()).replacingOccurrences(of: "$(port)", with: String(self.port))
           } catch let error {
             print(error)
             return ""

@@ -18,8 +18,6 @@ void getIpAddress(char* ip)
         perror("getifaddrs");
         exit(EXIT_FAILURE);
     }
-
-
     for (ifa = ifaddr; ifa != NULL; ifa = ifa->ifa_next)
     {
         if (ifa->ifa_addr == NULL)
@@ -31,19 +29,12 @@ void getIpAddress(char* ip)
         {
             if (s != 0)
             {
-//                printf("getnameinfo() failed: %s\n", gai_strerror(s));
-//                exit(EXIT_FAILURE);
                 exit(0);
             }
-//            printf("\tInterface : <%s>\n",ifa->ifa_name );
-//            printf("\t  Address : <%s>\n", host);
             if(strcmp(ifa->ifa_name, "en0") == 0) {
-//                printf("%d", sizeof(host));
                 strcpy(ip, host);
             }
         }
     }
-
     freeifaddrs(ifaddr);
-//    printf("matched %s", ip );
 }

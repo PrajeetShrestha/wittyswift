@@ -101,7 +101,7 @@
 
     async function fetchImages() {
         console.log("fetching data")
-        const { data } = await axios.get('http://$(serverUrl):8080/fetchImage')
+        const { data } = await axios.get('http://$(serverUrl):$(port)/fetchImage')
         console.log(data)
         var row_container = document.getElementById("row_container");
         row_container.innerHTML = ""
