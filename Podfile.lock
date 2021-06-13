@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (5.4.3)
+  - Alamofire (5.4.1)
   - FontAwesome.swift (1.9.1)
   - Moya (14.0.0):
     - Moya/Core (= 14.0.0)
@@ -17,7 +17,7 @@ SPEC REPOS:
     - Moya
 
 SPEC CHECKSUMS:
-  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   FontAwesome.swift: 6b52cb7be66eacd28cbfaa0ca7ffd0de4a186a1d
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
 

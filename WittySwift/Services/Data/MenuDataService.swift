@@ -21,6 +21,7 @@ struct Icons {
     static let messageCenter:UIImage = UIImage.fontAwesomeIcon(name: .bullhorn, style: .solid, textColor: color, size: size)
     static let networkMonitor:UIImage = UIImage.fontAwesomeIcon(name: .wifi, style: .solid, textColor: color, size: size)
     static let encoding:UIImage = UIImage.fontAwesomeIcon(name: .qrcode, style: .solid, textColor: color, size: size)
+    static let imageServer: UIImage = UIImage.fontAwesomeIcon(name: .image, style: .solid, textColor: color, size: size)
 }
 
 struct MenuDataservice {
@@ -28,6 +29,7 @@ struct MenuDataservice {
         MenuItem(controller: .list(MenuDataservice.utilityMenuItems, "Utilities"), iconImage: Icons.utilities),
         MenuItem(controller: .networking, iconImage: Icons.network),
         MenuItem(controller: .list(MenuDataservice.sandboxMenuItems, "Sandbox"), iconImage: Icons.sandbox),
+        MenuItem(controller: .imageserver, iconImage: Icons.imageServer)
     ]
     
     static var utilityMenuItems: [MenuItem] {

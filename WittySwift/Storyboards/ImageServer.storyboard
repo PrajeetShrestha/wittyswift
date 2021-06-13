@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Image Server View Controller-->
+        <scene sceneID="RJt-Ur-VTI">
+            <objects>
+                <viewController storyboardIdentifier="ImageServerViewController" id="6b2-F4-UUp" customClass="ImageServerViewController" customModule="WittySwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TVD-fQ-Ngf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMr-GD-nIR">
+                                <rect key="frame" x="207" y="448" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="linkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please connect to this url from your browser" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syq-Na-n40">
+                                <rect key="frame" x="16" y="370.5" width="382" height="45.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="l50-mW-zcI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Syq-Na-n40" firstAttribute="leading" secondItem="l50-mW-zcI" secondAttribute="leading" constant="16" id="D1t-9Y-947"/>
+                            <constraint firstItem="wMr-GD-nIR" firstAttribute="top" secondItem="Syq-Na-n40" secondAttribute="bottom" constant="32" id="KWb-G5-Ywa"/>
+                            <constraint firstItem="wMr-GD-nIR" firstAttribute="centerY" secondItem="TVD-fQ-Ngf" secondAttribute="centerY" id="fXx-cD-JqH"/>
+                            <constraint firstItem="wMr-GD-nIR" firstAttribute="centerX" secondItem="TVD-fQ-Ngf" secondAttribute="centerX" id="pfR-LC-s5w"/>
+                            <constraint firstItem="l50-mW-zcI" firstAttribute="trailing" secondItem="Syq-Na-n40" secondAttribute="trailing" constant="16" id="qOS-B5-Pqd"/>
+                            <constraint firstItem="Syq-Na-n40" firstAttribute="centerX" secondItem="TVD-fQ-Ngf" secondAttribute="centerX" id="ylN-qm-eCa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="linkLabel" destination="wMr-GD-nIR" id="bBt-Uy-ug2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Riw-sf-INj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="152" y="185"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

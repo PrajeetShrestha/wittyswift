@@ -7,6 +7,7 @@
 
 import UIKit
 import FontAwesome_swift
+import Photos
 
 class ControllerListViewController: NavigationAwareViewController {
     static func instantiate(menuItems:[MenuItem], viewTitle:String? = nil) -> ControllerListViewController {
@@ -53,7 +54,20 @@ extension ControllerListViewController:UITableViewDataSource {
 extension ControllerListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = menuItems[indexPath.row]
-        NavigationService.shared.navigateTo(item.controller)
+        if String(describing: item.controller) == "imageserver" {
+            PHPhotoLibrary.requestAuthorization { status in
+                switch status {
+                case .authorized:
+                    DispatchQueue.main.async {
+                        NavigationService.shared.navigateTo(item.controller)
+                    }
+                default:
+                    break
+                }
+            }
+        } else {
+            NavigationService.shared.navigateTo(item.controller)
+        }
     }
 }
 
